@@ -23,15 +23,15 @@ The model uses the following key equations:
 
 *   **Infection dynamic equation:**
 
-    *   In the basic SIR model, the change in infected individuals \( z \) over time is defined as \(\frac{d}{dt} z(t,x) = \beta (1-z-r) z - \gamma z\).
+    *   In the basic SIR model, the change in infected individuals $\( z \)$ over time is defined as $\(\frac{d}{dt} z(t,x) = \beta (1-z-r) z - \gamma z\)$.
 *   **Recovery dynamic equation:**
 
-    *   The change in recovered individuals \( r \) over time is defined as \(\frac{d}{dt} r(t,x) = \gamma z\)
+    *   The change in recovered individuals $\( r \)$ over time is defined as $\(\frac{d}{dt} r(t,x) = \gamma z\)$
 *   **Integro-Differential Equation for Infection (IDE):**
 
-    *   \(\frac{d}{dt} z(t,x) = \beta (1-z-r) \int_{0}^{1} z(t,y)k(t,x,y) \,dy - \gamma z\)
+    *   $\(\frac{d}{dt} z(t,x) = \beta (1-z-r) \int_{0}^{1} z(t,y)k(t,x,y) \,dy - \gamma z\)$
 *   **Kernel Function:**
-    *   \(k = (1-u(t))*(c*e^{-\delta|x - y|}) +k^*\)
+    *   $\(k = (1-u(t))*(c*e^{-\delta|x - y|}) +k^*\)$
 
 ## Numerical Approximation
 
@@ -40,11 +40,11 @@ The integro-differential equations are solved numerically using the Euler method
 *   **Discretization:** Approximating continuous derivatives with discrete differences using a time step τ.
 *   **Euler Method:** An iterative approach to approximate the solution of the differential equations at discrete time steps.
 *   **One-Dimensional Discretization:**
-    *   \(z_{i}^{k+1} = z_{i}^{k} + \tau [ \beta (1-z_{i}^{k}-r_{i}^{k}) \int_{0}^{1} z(t,y)k(t,x,y) dy - \gamma z_{i}^{k} ]\)
-    *   \(r_{i}^{k+1} = r_{i}^{k} + \tau [\gamma z_{i}^{k}]\)
+    *   $\(z_{i}^{k+1} = z_{i}^{k} + \tau [ \beta (1-z_{i}^{k}-r_{i}^{k}) \int_{0}^{1} z(t,y)k(t,x,y) dy - \gamma z_{i}^{k} ]\)$
+    *   $\(r_{i}^{k+1} = r_{i}^{k} + \tau [\gamma z_{i}^{k}]\)$
 *   **Two-Dimensional Discretization:**
-    *   \(z_{i,j}^{k+1} = z_{i,j}^{k} + \tau [ \beta (1-z_{i,j}^{k}-r_{i,j}^{k}) \int_{0}^{1} \int_{0}^{1} z(t,x,y)k(t,x,y) dy dx - \gamma z_{i,j}^{k} ]\)
-    *    \(r_{i,j}^{k+1} = r_{i,j}^{k} + \tau [\gamma z_{i,j}^{k}]\)
+    *   $\(z_{i,j}^{k+1} = z_{i,j}^{k} + \tau [ \beta (1-z_{i,j}^{k}-r_{i,j}^{k}) \int_{0}^{1} \int_{0}^{1} z(t,x,y)k(t,x,y) dy dx - \gamma z_{i,j}^{k} ]\)$
+    *    $\(r_{i,j}^{k+1} = r_{i,j}^{k} + \tau [\gamma z_{i,j}^{k}]\)$
 
 ## Implementation
 
@@ -65,7 +65,7 @@ Key parameters that can be adjusted in the models include:
 *   **β (beta):** Infection rate.
 *   **γ (gamma):** Recovery rate.
 *   **τ (tau):** Time step.
-*   **Kernel Parameters:** Parameters within the spatial interaction kernel, such as \( c \) and \( \delta \), which influence the range and strength of spatial interactions.
+*   **Kernel Parameters:** Parameters within the spatial interaction kernel, such as $\( c \)$ and $\( \delta \)$, which influence the range and strength of spatial interactions.
 
 ## Results
 
