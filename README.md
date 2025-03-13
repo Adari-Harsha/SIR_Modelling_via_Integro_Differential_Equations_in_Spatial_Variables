@@ -84,7 +84,7 @@ The project provides visualizations of infection spread in both one and two-dime
     ```bash
     pip install numpy matplotlib
     ```
-3.  **Run the Python scripts** to simulate the infection spread and generate visualizations.
-    *   `python "Infection and Recovery Model - A Numerical Solution".py`
-    *   `python "2D Infection Model with Euler Method".py`
+3.  **Run the Python script** to simulate the infection spread and generate visualizations.
+    *   `python "IDE-Python Code".py`
+   
 4.  **Modify the parameters** within the scripts to explore different scenarios and conditions.
