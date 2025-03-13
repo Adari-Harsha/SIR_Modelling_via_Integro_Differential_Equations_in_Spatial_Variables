@@ -31,8 +31,7 @@ The model uses the following key equations:
 
     *   $\(\frac{d}{dt} z(t,x) = \beta (1-z-r) \int_{0}^{1} z(t,y)k(t,x,y) \,dy - \gamma z\)$
 *   **Kernel Function:**
-    *   $\(k = (1-u(t))*(c*e^{-\delta|x - y|}) +k^*\)$
-
+        $K = (1 -u(t))(c*e^{-\delta|x - y|})  $
 ## Numerical Approximation
 
 The integro-differential equations are solved numerically using the Euler method [13-16]. This involves discretizing the spatial and temporal domains [17, 18].
@@ -53,10 +52,6 @@ The models are implemented using Python with the following libraries:
 *   **numpy:** For numerical computations.
 *   **matplotlib:** For creating visualizations and animations.
 
-### Model files
-
-*   **2D Infection Model:** `2D Infection Model with Euler Method`
-*   **1D Infection Model:** `Infection and Recovery Model: A Numerical Solution`
 
 ### Parameters
 
