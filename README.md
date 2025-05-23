@@ -70,16 +70,3 @@ The project provides visualizations of infection spread in both one and two-dime
 *   **Two-Dimensional Spatial Domain:**
     *   **Case 1:** Initial infection at the center of a 30x30 grid.
     *   **Case 2:** Initial infection at the corners of the domain.
-
-## Usage
-
-1.  **Clone the repository.**
-2.  **Install the required libraries:**
-
-    ```bash
-    pip install numpy matplotlib
-    ```
-3.  **Run the Python script** to simulate the infection spread and generate visualizations.
-    *   `python "IDE-Python Code".py`
-   
-4.  **Modify the parameters** within the scripts to explore different scenarios and conditions.
